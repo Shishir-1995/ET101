@@ -13,10 +13,12 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor
 public class User {
 
+	@Id
+	private Integer id;
+	
 	@NonNull
 	private String name;
 	
-	@Id
 	@NonNull
 	private String phoneNumber;
 	
