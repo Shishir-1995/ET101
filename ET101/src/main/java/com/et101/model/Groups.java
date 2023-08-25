@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,8 +25,12 @@ public class Groups {
 	private String groupName;
 	
 	private String description;
-	@NonNull
+	
+	@DBRef
 	private User creator;
+	
+	@DBRef
 	private List<User> members;
+	
 	private Map<User, Double> expenses;
 }
