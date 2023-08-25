@@ -25,6 +25,7 @@ public class Groups {
 	private String groupName;
 	
 	private String description;
+
 	@NonNull
 	@DBRef
 	private User creator;
@@ -32,4 +33,5 @@ public class Groups {
 	private List<User> members;
 	@DBRef
 	private List<Event> events;
+
 }
