@@ -29,8 +29,4 @@ public class Groups {
 	@DBRef
 	private User creator;
 	
-	@DBRef
-	private List<User> members;
-	
-	private Map<User, Double> expenses;
 }

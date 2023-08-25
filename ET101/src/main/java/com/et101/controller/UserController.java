@@ -12,13 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.et101.model.User;
 import com.et101.repository.UserRepository;
+import com.et101.service.UserImpl;
+import com.et101.service.UserInterface;
 
 @RestController
 @RequestMapping("/user")
 public class UserController {
 
 	@Autowired
-	UserRepository userRepo;
+	UserInterface userService = new UserImpl();
 	
 	@GetMapping("/")
 	public String welcome() {
@@ -27,14 +29,14 @@ public class UserController {
 	
 	@PostMapping("/add")
 	public ResponseEntity<User> addUser(@RequestBody User user){
-		User savedUser = userRepo.save(user);
+		User savedUser = userService.addUser(user);
 		
 		return new ResponseEntity<User>(savedUser, HttpStatus.CREATED);
 	}
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<User> findUserById(@PathVariable Integer id){
-		User user = userRepo.findById(id).get();
+		User user = userService.findUserById(id);
 		return new ResponseEntity<User>(user, HttpStatus.OK);
 	}
 	
