@@ -6,30 +6,30 @@ import java.util.Map;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 
+import com.mongodb.lang.NonNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @RequiredArgsConstructor
 @NoArgsConstructor
-public class Groups {
+public class Event {
 	
 	@Id
 	private Integer id;
 	
 	@NonNull
-	private String groupName;
+	private String name;
 	
-	private String description;
 	@NonNull
 	@DBRef
-	private User creator;
+	private List<User> paidBy;
 	@DBRef
-	private List<User> members;
-	@DBRef
-	private List<Event> events;
+	private Map<User, Double> expenseDivision;
+	
+
 }
