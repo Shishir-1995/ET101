@@ -1,9 +1,10 @@
-package com.et101.service;
+package com.et101.service.impl;
 
 import org.springframework.stereotype.Service;
 
 import com.et101.model.User;
 import com.et101.repository.UserRepository;
+import com.et101.service.inter.UserInterface;
 
 @Service
 public class UserImpl implements UserInterface {

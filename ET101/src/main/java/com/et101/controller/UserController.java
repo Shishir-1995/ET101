@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.et101.model.User;
 import com.et101.repository.UserRepository;
-import com.et101.service.UserImpl;
-import com.et101.service.UserInterface;
+import com.et101.service.impl.UserImpl;
+import com.et101.service.inter.UserInterface;
 
 @RestController
 @RequestMapping("/user")

@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.et101.model.Groups;
 import com.et101.repository.GroupsRepository;
-import com.et101.service.GroupInterface;
-import com.et101.service.GroupsImpl;
+import com.et101.service.impl.GroupsImpl;
+import com.et101.service.inter.GroupInterface;
 
 @RestController
 @RequestMapping("/groups")
