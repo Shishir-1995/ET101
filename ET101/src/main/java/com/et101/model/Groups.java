@@ -1,7 +1,6 @@
 package com.et101.model;
 
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -23,7 +22,7 @@ public class Groups {
 	
 	@NonNull
 	private String groupName;
-	
+
 	private String description;
 
 	@NonNull
@@ -33,5 +32,5 @@ public class Groups {
 	private List<User> members;
 	@DBRef
 	private List<Event> events;
-
+	
 }

@@ -11,6 +11,12 @@ import com.mongodb.lang.NonNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+//import com.mongodb.lang.NonNull;
+
+//import lombok.AllArgsConstructor;
+//import lombok.Data;
+//import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 @Data
@@ -18,6 +24,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @NoArgsConstructor
 public class Event {
+	
 	
 	@Id
 	private Integer id;
@@ -29,7 +36,7 @@ public class Event {
 	@DBRef
 	private List<User> paidBy;
 	@DBRef
-	private Map<User, Double> expenseDivision;
+	private Map<User, Double> expenseDivision;	
 	
 
 }
